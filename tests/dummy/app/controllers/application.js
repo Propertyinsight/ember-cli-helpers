@@ -6,6 +6,10 @@ export default Ember.Controller.extend({
 
     text: 'line1\nline2',
 
-    price: 12345.67
+    price: 12345.67,
+
+    focus: 'i should be in focus',
+
+    url: 'foo.com'
 
 });
