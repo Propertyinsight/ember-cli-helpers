@@ -14,7 +14,7 @@ export default Ember.TextField.extend({
     }.observes('value'),
 
     formatValue: function() {
-        var pattern = /^https{0,1}:\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+/g;
+        var pattern = /^https{0,1}:\/\/[A-Za-z0-9-]+\.[A-Za-z0-9-]+/g;
         if (pattern.test(this.get('value')))
           return;
 
