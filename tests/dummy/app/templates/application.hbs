@@ -22,3 +22,20 @@
     input-url: {{url}}
     {{input-url value=url}}
 </div>
+
+<div>
+    truncate:
+    {{truncate-text value="Foo Bar" length=5}}
+</div>
+<div>
+    truncate:
+    {{truncate-text value="Foo Bar" length=5 postfix="??"}}
+</div>
+<div>
+    truncate:
+    {{truncate-text value="Foo Bar" length=10}}
+</div>
+<div>
+    truncate:
+    {{truncate-text length=3}}
+</div>
