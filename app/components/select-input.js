@@ -8,6 +8,7 @@ export default Component.extend({
   labelAttribute: 'label',
   options: [],
   optionsKey: alias('valueAttribute'),
+  prompt: null,
   valueAttribute: 'value',
 
   change(){

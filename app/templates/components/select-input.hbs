@@ -1,3 +1,6 @@
+{{#if prompt}}
+  {{select-option currentSelection=currentSelection option=prompt}}
+{{/if}}
 {{#each options key=optionsKey as |option|}}
   {{select-option valueAttribute=valueAttribute labelAttribute=labelAttribute currentSelection=currentSelection option=option}}
 {{/each}}
