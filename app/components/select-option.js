@@ -19,7 +19,10 @@ export default Component.extend({
   }),
 
   getOptionValue(attribute){
-    const attributeName = 'option.' + this.get(attribute);
+    let attributeName = 'option';
+    if (typeof(this.get('option')) === 'object'){
+      attributeName += '.' + this.get(attribute);
+    }
     return this.get(attributeName);
   },
 
