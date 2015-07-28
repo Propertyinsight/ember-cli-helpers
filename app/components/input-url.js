@@ -1,15 +1,15 @@
 import Ember from 'ember';
-var observes = Ember.observer;
+const {TextField, observer} = Ember;
 
-export default Ember.TextField.extend({
+export default TextField.extend({
   type: 'url',
 
-  didInsertElement: function() {
-    this._super.apply(this, arguments);
+  didInsertElement() {
+    this._super(...arguments);
     this.formatValue();
   },
 
-  onValueChange: observes('value', function(){
+  onValueChange: observer('value', function(){
     this.formatValue();
   }),
 
