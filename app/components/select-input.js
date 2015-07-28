@@ -1,11 +1,13 @@
 import Ember from 'ember';
-const {Component} = Ember;
+const {Component, computed} = Ember;
+const alias = computed.alias;
 
 export default Component.extend({
   tagName: 'select',
-  options: [],
-  selected: null,
+  currentSelection: null,
   labelAttribute: 'label',
+  options: [],
+  optionsKey: alias('valueAttribute'),
   valueAttribute: 'value',
 
   change(){
